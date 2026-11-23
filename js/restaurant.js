@@ -1,27 +1,27 @@
 // Reservation requests are prepared in Gmail. Nothing is sent automatically.
 function createReservationUrl(details) {
   const dateParts = details.date.split("-");
-  const formattedDate = `${dateParts[2]}.${dateParts[1]}.${dateParts[0]}`;
+  const formattedDate = `${dateParts[1]}/${dateParts[2]}/${dateParts[0]}`;
   const message = [
-    "Hallo Sushi Fish,",
+    "Hello Sushi Fish,",
     "",
-    "ich möchte gerne einen Tisch anfragen:",
+    "I would like to request a table:",
     `Name: ${details.name}`,
-    `E-Mail: ${details.email}`,
-    `Datum: ${formattedDate}`,
-    `Uhrzeit: ${details.time}`,
-    `Personen: ${details.guests}`,
+    `Email: ${details.email}`,
+    `Date: ${formattedDate}`,
+    `Time: ${details.time}`,
+    `Guests: ${details.guests}`,
     "",
-    `Nachricht: ${details.note || "Keine weiteren Wünsche."}`,
+    `Message: ${details.note || "No additional requests."}`,
     "",
-    "Bitte bestätigt mir, ob die Reservierung möglich ist.",
-    "Vielen Dank!"
+    "Please confirm whether the reservation is available.",
+    "Thank you!"
   ].join("\n");
   const parameters = new URLSearchParams({
     view: "cm",
     fs: "1",
     to: "sushifish0000@gmail.com",
-    su: `Reservierungsanfrage – ${formattedDate}, ${details.time} Uhr`,
+    su: `Reservation Request – ${formattedDate}, ${details.time}`,
     body: message
   });
   return `https://mail.google.com/mail/?${parameters.toString()}`;
@@ -76,7 +76,7 @@ reservationForm.addEventListener("submit", (event) => {
 
   const visit = new Date(`${dateInput.value}T${timeInput.value}:00`);
   if (visit <= now) {
-    timeInput.setCustomValidity("Bitte wähle einen Zeitpunkt in der Zukunft.");
+    timeInput.setCustomValidity("Please choose a future date and time.");
     timeInput.reportValidity();
     return;
   }
@@ -92,12 +92,12 @@ reservationForm.addEventListener("submit", (event) => {
   });
 
   window.open(url, "_blank", "noopener,noreferrer");
-  statusMessage.replaceChildren(document.createTextNode("Deine Anfrage ist vorbereitet. Bitte sende sie in Gmail ab. Sollte sich kein Fenster öffnen: "));
+  statusMessage.replaceChildren(document.createTextNode("Your request is ready. Please send it in Gmail. If no window opens: "));
   const fallbackLink = document.createElement("a");
   fallbackLink.href = url;
   fallbackLink.target = "_blank";
   fallbackLink.rel = "noopener noreferrer";
-  fallbackLink.textContent = "Gmail öffnen";
+  fallbackLink.textContent = "Open Gmail";
   statusMessage.append(fallbackLink);
   statusMessage.hidden = false;
 });
