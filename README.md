@@ -61,7 +61,7 @@ The page uses embedded SVG symbols and does not require a Font Awesome icon font
 
 ## 🌐 Live Website
 
-[Visit SushiFish](https://your-project.vercel.app)
+[Visit SushiFish](https://sushifish.vercel.app/)
 
 ## 🚀 Deployment
 
