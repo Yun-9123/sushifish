@@ -22,31 +22,15 @@ The website includes:
 | Fish Rolls | Salmon Avocado, Tuna Mango | EUR 7.00 |
 | Duck Roll | Duck Roll | EUR 7.00 |
 
-## Local Preview
-
-The website is built with static HTML, CSS, and JavaScript and can be opened directly in a browser:
-
-```text
-index.html
-```
-
-For a more reliable local preview, start a simple web server:
-
-```powershell
-python -m http.server 8000
-```
-
-Then open:
-
-```text
-http://localhost:8000
-```
-
 ## Reservation Form
 
 The form validates the date and time locally. Requests must be made during **10:00 AM–9:00 PM**, and the selected time cannot be in the past.
 
 On submission, the page opens a Gmail link with the recipient, subject, and message prefilled. No data is sent automatically to a server; the email must be sent manually in Gmail.
+
+## 🌐 Live Website
+
+[Visit SushiFish](https://sushifish.vercel.app/)
 
 ## Technologies
 
@@ -58,10 +42,6 @@ On submission, the page opens a Gmail link with the recipient, subject, and mess
 - Parallax.js
 
 The page uses embedded SVG symbols and does not require a Font Awesome icon font.
-
-## 🌐 Live Website
-
-[Visit SushiFish](https://sushifish.vercel.app/)
 
 ## 🚀 Deployment
 
