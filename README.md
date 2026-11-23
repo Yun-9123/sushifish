@@ -59,6 +59,15 @@ On submission, the page opens a Gmail link with the recipient, subject, and mess
 
 The page uses embedded SVG symbols and does not require a Font Awesome icon font.
 
+## 🌐 Live Website
+
+[Visit SushiFish](https://your-project.vercel.app)
+
+## 🚀 Deployment
+
+This website is deployed on Vercel and connected
+to GitHub for automatic deployments.
+
 ## Project Structure
 
 ```text
