@@ -1,0 +1,176 @@
+/*
+Parallo template by TemplateMo: https://templatemo.com/tm-534-parallo
+Sushi Fish adaptation. Only styles used by the restaurant page remain.
+*/
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #6b6b6b;
+  background: #102329;
+}
+a, button { transition: color .3s ease, background-color .3s ease; }
+a:hover { text-decoration: none; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid #0099cc;
+  outline-offset: 4px;
+}
+p { line-height: 1.7; }
+[hidden] { display: none !important; }
+.container-fluid { max-width: 1310px; }
+.small, small { font-size: 90%; }
+.parallax-window { min-height: 1100px; background: transparent; }
+/* A CSS fallback keeps the original backdrop visible if parallax is unavailable. */
+body.no-parallax .parallax-window { background: url("../img/bg-01.jpg") center top / cover fixed; }
+.icon-definitions { position: absolute; width: 0; height: 0; overflow: hidden; }
+.tm-icon { width: 58px; height: 58px; fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.tm-bg-white-transparent { background-color: rgba(255, 255, 255, .88); }
+.tm-bg-white { background-color: white; }
+.tm-bg-black-transparent { background-color: rgba(15, 29, 32, .86); color: white; }
+.skip-link { position: absolute; top: -100px; left: 15px; z-index: 2000; background: white; color: #333; padding: 14px 20px; }
+.skip-link:focus { top: 10px; }
+
+/* Original brand panel and navigation layout. */
+.tm-brand-row { align-items: center; padding-top: 40px; padding-bottom: 28px; }
+.tm-brand-container { max-width: 400px; min-height: 200px; display: flex; align-items: center; justify-content: center; color: #333; padding: 20px; }
+.tm-brand-container:hover { color: #333; }
+.tm-brand-icon { width: 79px; height: 77px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: #333436; color: white; border-radius: 50%; margin-right: 20px; }
+.tm-brand-icon .tm-icon { width: 48px; height: 48px; }
+.tm-brand-name { font-size: 2rem; color: #333; white-space: nowrap; }
+.tm-brand-texts .small { display: block; font-size: .875rem; }
+.tm-navbar { max-width: 840px; min-height: 120px; }
+.tm-navbar .navbar-nav { width: 100%; display: flex; align-items: center; justify-content: space-around; }
+.navbar-expand-lg .navbar-nav .nav-link { padding: 19px 12px; }
+.navbar-light .navbar-nav .nav-link { color: #55585a; }
+.nav-item { position: relative; }
+.nav-link { font-size: 1.1rem; }
+.tm-nav-link-highlight { visibility: hidden; width: 16px; height: 16px; background: #666768; position: absolute; top: -8px; left: calc(50% - 8px); }
+.nav-item:hover .tm-nav-link-highlight, .nav-item.active .tm-nav-link-highlight { visibility: visible; }
+.nav-item .nav-link { border-top: 1px solid transparent; }
+.nav-item.active .nav-link, .nav-item:hover .nav-link { border-top-color: #666768; }
+
+/* Original split hero, now with a sushi photograph. */
+#tmHome { padding-top: 30px; padding-bottom: 68px; }
+.tm-home-container { display: flex; align-items: center; justify-content: center; }
+.tm-home-left { max-width: 440px; width: 100%; margin-right: 140px; text-shadow: 0 2px 6px rgba(0,0,0,.6); }
+.tm-slogan { font-size: 1.15rem; letter-spacing: .04em; margin-bottom: 30px; }
+.tm-home-hr { border-top-color: white; margin-bottom: 30px; }
+.tm-home-title { font-size: 3.5rem; margin-bottom: 32px; }
+.tm-home-text { margin-bottom: 36px; }
+.tm-home-right { margin: 0; max-width: 360px; width: 100%; flex-shrink: 0; }
+.tm-home-right img { display: block; width: 100%; height: 450px; object-fit: cover; }
+.tm-home-right figcaption, .tm-about-photo figcaption { font-size: .875rem; text-align: right; padding-top: 8px; color: white; }
+.tm-hero-hours { font-size: 1rem; margin: 20px 0 0; }
+.btn { border-radius: 0; padding: 13px 30px; font-size: 1.15rem; text-shadow: none; white-space: normal; }
+.btn-primary { background: white; border: 1px solid white; color: #3e3f40; }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:not(:disabled):active { background: #495057; border-color: #495057; color: white; }
+.btn-secondary { background: #007da6; color: white; border: 1px solid #007da6; }
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:not(:disabled):active { background: #005f80; border-color: #005f80; color: white; }
+
+/* The original three translucent cards now introduce the menu. */
+#speisekarte { padding-top: 35px; }
+.tm-section-heading { max-width: 750px; margin: 0 auto; }
+.tm-section-heading .tm-slogan { margin-bottom: 15px; }
+.tm-section-heading h2 { font-size: 2.5rem; margin-bottom: 24px; }
+.tm-section-heading > p:last-child { font-size: 1rem; padding: 0 15px; }
+#tmFeatures { padding-top: 40px; padding-bottom: 60px; max-width: 1260px; margin-left: auto; margin-right: auto; }
+.tm-feature-box { max-width: 360px; min-height: 440px; height: 100%; border-radius: 10px; text-align: center; padding: 40px 32px; margin-left: auto; margin-right: auto; }
+.tm-feature-name { color: #222; font-size: 1.65rem; margin-bottom: 30px; }
+.tm-feature-icon-container { width: 110px; height: 110px; border: 1px solid #3e3f40; color: #3e3f40; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px; }
+.tm-menu-list { list-style: none; padding: 0; margin: 0; text-align: left; }
+.tm-menu-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: baseline; border-top: 1px solid #c7ccce; padding: 15px 0; font-size: 1rem; }
+.tm-menu-list li:last-child { padding-bottom: 0; }
+.tm-menu-list strong { color: #333; font-weight: 600; white-space: nowrap; }
+
+/* The original photo-and-white-panel section. */
+#ueber-uns { padding-top: 60px; padding-bottom: 60px; }
+.tm-call-to-action-col { display: flex; align-items: center; max-width: 1230px; margin-left: auto; margin-right: auto; }
+.tm-about-photo { width: 400px; flex-shrink: 0; margin: 0 20px 0 0; }
+.tm-call-to-action-image { width: 400px; height: 500px; object-fit: cover; }
+.tm-call-to-action-text { padding: 45px 50px; min-height: 400px; width: calc(100% - 420px); }
+.tm-eyebrow { font-size: .875rem; letter-spacing: .08em; }
+.tm-call-to-action-title { font-size: 2.1rem; margin-bottom: 28px; }
+.tm-call-to-action-description { margin-bottom: 24px; font-size: 1.1rem; }
+
+/* Visit details and a real Gmail reservation draft, replacing the dummy forms. */
+.tm-visit-section { padding-top: 60px; padding-bottom: 30px; align-items: stretch; }
+.tm-contact-text { padding: 45px 35px; height: 100%; }
+.tm-contact-text h2, .tm-reservation-panel h2 { font-size: 2rem; margin-bottom: 25px; }
+.tm-contact-details { margin: 30px 0; }
+.tm-contact-details dt { font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+.tm-contact-details dd { margin-bottom: 28px; overflow-wrap: anywhere; }
+.tm-contact-details a { color: white; text-decoration: underline; text-underline-offset: 4px; }
+.tm-contact-note { font-size: 1rem; margin-bottom: 0; }
+.tm-reservation-panel { padding: 45px 40px; height: 100%; }
+.tm-reservation-panel > p { font-size: 1rem; margin-bottom: 28px; }
+.form-group { margin-bottom: 22px; }
+.form-group label { font-size: 1rem; color: #333; }
+.form-control { height: auto; min-height: 48px; border-radius: 0; border: 1px solid #adb5bd; background: white; color: #333; padding: 10px 12px; font-size: 1rem; }
+.form-control:focus { border-color: #007da6; box-shadow: 0 0 0 .2rem rgba(0,125,166,.18); }
+.form-group small, .tm-optional { font-size: .875rem; }
+.form-group small { display: block; margin-top: 5px; }
+.tm-form-note { font-size: .875rem; margin: 18px 0 0; }
+.tm-reservation-status { margin: 20px 0 0; padding: 15px; background: #e8f5f3; color: #134c44; font-size: 1rem; overflow-wrap: anywhere; }
+.tm-reservation-status a { color: #005a71; text-decoration: underline; }
+.tm-copyright-text { font-size: 1rem; padding-top: 50px; padding-bottom: 40px; }
+.tm-copyright-text p { margin-bottom: 8px; }
+.tm-copyright-link { color: white; text-decoration: underline; text-underline-offset: 3px; }
+.tm-copyright-link:hover { color: #a0e8f5; }
+.tm-photo-credits { font-size: .875rem; }
+
+@media (max-width: 1199px) {
+  .tm-home-left { margin-right: 70px; }
+  .tm-brand-icon { width: 60px; height: 60px; margin-right: 12px; }
+  .tm-brand-name { font-size: 1.7rem; }
+  .tm-brand-texts .small { font-size: .8125rem; }
+  .nav-link { font-size: 1rem; }
+}
+@media (max-width: 991px) {
+  .tm-nav { position: relative; }
+  #navbarNav { position: absolute; right: 0; top: 80px; min-width: 250px; background: rgba(255,255,255,.97); z-index: 1001; padding: 12px; }
+  .tm-navbar { background: transparent; justify-content: flex-end; }
+  .navbar-toggler { background: rgba(255,255,255,.88); }
+  .navbar-expand-lg .navbar-nav .nav-link { padding: 14px 19px; }
+  .tm-brand-container { max-width: 400px; }
+  .tm-brand-name { font-size: 2rem; }
+  .tm-brand-icon { width: 79px; height: 77px; margin-right: 20px; }
+  .tm-brand-texts .small { font-size: .875rem; }
+  .tm-home-left { margin-right: 40px; }
+  .tm-home-right { max-width: 300px; }
+  #tmFeatures > div { margin-bottom: 25px; }
+  .tm-feature-box { max-width: 600px; min-height: 0; }
+  .tm-contact-col-left { margin-bottom: 25px; }
+}
+@media (max-width: 849px) {
+  .tm-call-to-action-col { flex-direction: column; }
+  .tm-about-photo { max-width: 600px; width: 100%; margin: 0 0 20px; }
+  .tm-call-to-action-image { width: 100%; height: 400px; }
+  .tm-call-to-action-text { width: 100%; max-width: 600px; }
+}
+@media (max-width: 767px) {
+  .tm-home-container { flex-direction: column; }
+  .tm-home-left { margin: 0 0 40px; }
+  .tm-home-right { max-width: 440px; }
+  .tm-home-right img { height: 450px; }
+  #tmHome { padding-bottom: 35px; }
+  .tm-brand-container { min-height: 160px; justify-content: flex-start; }
+}
+@media (max-width: 479px) {
+  .tm-brand-row { padding-top: 20px; }
+  .tm-brand-container { padding: 18px 12px; min-height: 140px; }
+  .tm-brand-icon { width: 45px; height: 45px; margin-right: 10px; }
+  .tm-brand-icon .tm-icon { width: 33px; height: 33px; }
+  .tm-brand-name { font-size: 1.35rem; }
+  .tm-brand-texts .small { font-size: .875rem; }
+  .tm-home-title { font-size: 2.7rem; }
+  .tm-home-right img { height: 360px; }
+  .tm-call-to-action-text, .tm-contact-text, .tm-reservation-panel { padding: 30px 24px; }
+  .tm-call-to-action-title { font-size: 1.8rem; }
+  .btn { font-size: 1rem; padding: 13px 20px; }
+  .tm-reservation-panel .btn { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  a, button { transition: none; }
+}
